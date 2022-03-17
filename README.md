@@ -1,8 +1,8 @@
 # flutter_desktop_test
 
-该项目的作用是用于学习Flutter Desktop开发常用功能插件。
+该项目的作用是学习Flutter Desktop开发常用功能插件。
 
-目前所有内容仅适用于 Windows 端，Liunx 和 macOs平台可能需要另外进行配置，具体请查看各个第三方插件的官方文档。
+目前所有内容仅适用于 Windows 端，Liunx 和 macOS平台可能需要另外进行配置，具体请查看各个第三方插件的官方文档。
 
 目前该应用已拥有以下功能：
 
@@ -18,7 +18,9 @@
 
   > 详细教程：[Flutter桌面端开发——拖动文件到应用](https://juejin.cn/post/7075261040744726559)
 
-- [ ] 选取本地文件 —— [file_selector](https://pub.dev/packages/file_selector) 、[file_picker](https://pub.dev/packages/file_picker)
+- [x] 选取本地文件 —— [file_selector](https://pub.dev/packages/file_selector) 、[file_picker](https://pub.dev/packages/file_picker)
+
+  > 详细教程：[Flutter桌面端开发——选择读取本地文件](https://juejin.cn/post/7075889517210632200/)
 
 一些辅助插件：
 
@@ -45,7 +47,7 @@ flutter pub get
 flutter run -d windows
 ```
 
-如果你是初学者，以下内容可以帮助你：
+如果你是初学者，以下内容可以帮助到你：
 
 - [Flutter中文官网](https://flutter.cn/)
 - [《Flutter实战第二版》](https://book.flutterchina.club/)

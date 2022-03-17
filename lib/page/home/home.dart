@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     const SystemTrayManagerPage(),
     const DropFilePage(),
     const UploadFilePage(),
-    DesktopTestPage(),
+    const DesktopTestPage(),
   ];
 
   final List<String> _titles = [

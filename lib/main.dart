@@ -20,6 +20,7 @@ void main() async {
     await windowManager.show();
     // await windowManager.setSkipTaskbar(false);
   });
+
   runApp(const MyApp());
 }
 

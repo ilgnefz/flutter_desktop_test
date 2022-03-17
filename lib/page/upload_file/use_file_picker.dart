@@ -16,12 +16,14 @@ class UseFilePickerPage extends StatefulWidget {
 class _UseFilePickerPageState extends State<UseFilePickerPage> {
   void _pickSingleFile() async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
-      allowMultiple: true,
+      dialogTitle: '我的地盘我做主',
+      initialDirectory: r'C:\Users\ilgnefz\Desktop',
+      type: FileType.image,
     );
     if (result != null) {
       File file = File(result.files.single.path!);
       widget.provider.setFilePath(file.path);
-      widget.provider.setFileType('multiImage');
+      widget.provider.setFileType('image');
     }
   }
 
