@@ -53,6 +53,12 @@ flutter pub get
 flutter run -d windows
 ```
 
+如果你想要项目运行在新平台，请使用以下命令：
+
+```shell
+flutter create --platforms=web,macos,linux .
+```
+
 如果你是初学者，以下内容可以帮助到你：
 
 - [Flutter中文官网](https://flutter.cn/)
