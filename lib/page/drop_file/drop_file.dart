@@ -4,6 +4,7 @@ import 'package:cross_file/cross_file.dart';
 import 'package:dotted_decoration/dotted_decoration.dart';
 import 'package:flutter/material.dart';
 import 'package:desktop_drop/desktop_drop.dart';
+import 'package:flutter_desktop_test/widgets/image_decorated.dart';
 
 class DropFilePage extends StatefulWidget {
   const DropFilePage({Key? key}) : super(key: key);
@@ -81,12 +82,7 @@ class ViewImage extends StatelessWidget {
               return const CircularProgressIndicator();
             }
             if (snapshot.hasData) {
-              return DecoratedBox(
-                decoration: const BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(blurRadius: 8, color: Colors.black26),
-                  ],
-                ),
+              return ImageDecorated(
                 child: Image.memory(
                   snapshot.data,
                   fit: BoxFit.contain,

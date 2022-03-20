@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_desktop_test/widgets/title_divider.dart';
 
 import 'use_system_tray.dart';
 import 'use_tray_manager.dart';
@@ -19,12 +20,9 @@ class _SystemTrayManagerPageState extends State<SystemTrayManagerPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Text('—————————— tray manager ——————————'),
-            SizedBox(height: 24),
+            TitleDivider('tray manager'),
             UseTrayManagerPage(),
-            SizedBox(height: 24),
-            Text('—————————— system tray ——————————'),
-            SizedBox(height: 24),
+            TitleDivider('system tray'),
             UseSystemTrayPage(),
           ],
         ),

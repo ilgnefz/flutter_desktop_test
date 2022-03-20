@@ -7,7 +7,7 @@ import 'package:window_manager/window_manager.dart';
 
 import 'page/home/home.dart';
 
-void main() async {
+void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await windowManager.ensureInitialized();

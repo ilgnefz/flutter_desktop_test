@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/providers/upload_file.dart';
+import 'package:flutter_desktop_test/widgets/image_decorated.dart';
 
 class SingleFile extends StatelessWidget {
   const SingleFile(this.provider, {Key? key}) : super(key: key);
@@ -16,12 +17,7 @@ class SingleFile extends StatelessWidget {
       children: [
         Expanded(
           child: Center(
-            child: DecoratedBox(
-              decoration: const BoxDecoration(
-                boxShadow: [
-                  BoxShadow(blurRadius: 8, color: Colors.black26),
-                ],
-              ),
+            child: ImageDecorated(
               child: Image.file(
                 File(provider.file?.path ?? ''),
                 fit: BoxFit.contain,
@@ -31,7 +27,6 @@ class SingleFile extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Column(
-          // mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('名称: ${provider.file?.name}',

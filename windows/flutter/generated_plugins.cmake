@@ -6,8 +6,12 @@ list(APPEND FLUTTER_PLUGIN_LIST
   desktop_drop
   file_selector_windows
   local_notifier
+  pasteboard
+  screen_capturer
+  screen_text_extractor
   system_tray
   tray_manager
+  url_launcher_windows
   win_toast
   window_manager
 )

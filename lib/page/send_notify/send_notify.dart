@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_desktop_test/widgets/title_divider.dart';
 
 import 'use_local_notifier.dart';
 import 'use_win_toast.dart';
@@ -14,13 +15,9 @@ class SendNotifyPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            SizedBox(height: 24),
-            Text('—————————— local notifier ——————————'),
-            SizedBox(height: 24),
+            TitleDivider('local notifier'),
             UseLocalNotifier(),
-            SizedBox(height: 24),
-            Text('—————————— win toast ——————————'),
-            SizedBox(height: 24),
+            TitleDivider('win toast'),
             UseWinToast(),
           ],
         ),

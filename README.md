@@ -21,6 +21,10 @@
 - [x] 选取本地文件 —— [file_selector](https://pub.dev/packages/file_selector) 、[file_picker](https://pub.dev/packages/file_picker)
 
   > 详细教程：[Flutter桌面端开发——选择读取本地文件](https://juejin.cn/post/7075889517210632200/)
+  
+- [x] 值和粘贴内容 —— [screen_capturer](https://pub.dev/packages/screen_capturer) 、[screen_text_extractor](https://pub.dev/packages/screen_text_extractor) 、[pasteboard](https://pub.dev/packages/pasteboard) 、[clipboard](https://pub.dev/packages/clipboard)
+
+  > 详细教程：[Flutter桌面端开发——复制和粘贴内容](https://juejin.cn/post/7076983397691686919/)
 
 一些辅助插件：
 
@@ -30,6 +34,8 @@
 - [cross_file](https://pub.dev/packages/cross_file)：文件信息管理插件
 - [dotted_decoration](https://pub.dev/packages/dotted_decoration)：绘制虚线插件
 - [flutter_staggered_grid_view](https://pub.dev/packages/flutter_staggered_grid_view)：瀑布流显示插件
+- [url_launcher](https://pub.dev/packages/url_launcher) ：运行URL的插件
+- [path_provider](https://pub.dev/packages/path_provider) ：用于查找文件系统上常用位置
 
 ## 使用
 

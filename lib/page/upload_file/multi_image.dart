@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_desktop_test/widgets/image_decorated.dart';
 import 'dart:io';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -15,12 +16,7 @@ class MultiImage extends StatelessWidget {
       crossAxisSpacing: 12,
       crossAxisCount: paths.length > 3 ? 3 : paths.length,
       itemBuilder: (context, index) {
-        return DecoratedBox(
-          decoration: const BoxDecoration(
-            boxShadow: [
-              BoxShadow(blurRadius: 8, color: Colors.black26),
-            ],
-          ),
+        return ImageDecorated(
           child: Image.file(
             File(paths[index]!),
             fit: BoxFit.contain,
