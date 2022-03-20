@@ -22,7 +22,7 @@
 
   > 详细教程：[Flutter桌面端开发——选择读取本地文件](https://juejin.cn/post/7075889517210632200/)
   
-- [x] 值和粘贴内容 —— [screen_capturer](https://pub.dev/packages/screen_capturer) 、[screen_text_extractor](https://pub.dev/packages/screen_text_extractor) 、[pasteboard](https://pub.dev/packages/pasteboard) 、[clipboard](https://pub.dev/packages/clipboard)
+- [x] 复制和粘贴内容 —— [screen_capturer](https://pub.dev/packages/screen_capturer) 、[screen_text_extractor](https://pub.dev/packages/screen_text_extractor) 、[pasteboard](https://pub.dev/packages/pasteboard) 、[clipboard](https://pub.dev/packages/clipboard)
 
   > 详细教程：[Flutter桌面端开发——复制和粘贴内容](https://juejin.cn/post/7076983397691686919/)
 
