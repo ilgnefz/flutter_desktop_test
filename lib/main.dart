@@ -1,4 +1,5 @@
 import 'package:bot_toast/bot_toast.dart';
+import 'package:desktop_webview_window/desktop_webview_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/providers/upload_file.dart';
 import 'package:local_notifier/local_notifier.dart';
@@ -8,6 +9,10 @@ import 'package:window_manager/window_manager.dart';
 import 'page/home/home.dart';
 
 void main(List<String> args) async {
+  if (runWebViewTitleBarWidget(args)) {
+    return;
+  }
+
   WidgetsFlutterBinding.ensureInitialized();
 
   await windowManager.ensureInitialized();

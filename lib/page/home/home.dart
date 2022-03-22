@@ -5,6 +5,7 @@ import 'package:flutter_desktop_test/page/read_clipboard/read_clipboard.dart';
 import 'package:flutter_desktop_test/page/send_notify/send_notify.dart';
 import 'package:flutter_desktop_test/page/system_tray_manager/system_tray_manager.dart';
 import 'package:flutter_desktop_test/page/upload_file/upload_file.dart';
+import 'package:flutter_desktop_test/page/use_webview/use_web_view.dart';
 import 'package:window_manager/window_manager.dart';
 
 import 'welcome.dart';
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     const DropFilePage(),
     const UploadFilePage(),
     const ReadClipboardPage(),
+    const UseWebView(),
     const DesktopTestPage(),
   ];
 
@@ -34,6 +36,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     '拖入文件到程序',
     '上传文件',
     '读取剪切板',
+    'WebView',
     '测试专用',
   ];
 

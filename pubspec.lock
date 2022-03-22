@@ -85,6 +85,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.3.3"
+  desktop_webview_window:
+    dependency: "direct main"
+    description:
+      name: desktop_webview_window
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.6"
   dotted_decoration:
     dependency: "direct main"
     description:

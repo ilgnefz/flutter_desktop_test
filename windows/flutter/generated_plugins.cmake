@@ -4,6 +4,7 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   desktop_drop
+  desktop_webview_window
   file_selector_windows
   local_notifier
   pasteboard
