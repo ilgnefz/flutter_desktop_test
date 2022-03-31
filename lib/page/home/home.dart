@@ -3,6 +3,7 @@ import 'package:flutter_desktop_test/page/desktop_test/desktop_test.dart';
 import 'package:flutter_desktop_test/page/drop_file/drop_file.dart';
 import 'package:flutter_desktop_test/page/read_clipboard/read_clipboard.dart';
 import 'package:flutter_desktop_test/page/send_notify/send_notify.dart';
+import 'package:flutter_desktop_test/page/set_context_menu/set_context_menu.dart';
 import 'package:flutter_desktop_test/page/system_tray_manager/system_tray_manager.dart';
 import 'package:flutter_desktop_test/page/upload_file/upload_file.dart';
 import 'package:flutter_desktop_test/page/use_webview/use_web_view.dart';
@@ -26,6 +27,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     const UploadFilePage(),
     const ReadClipboardPage(),
     const UseWebView(),
+    const SetContextMenuPage(),
     const DesktopTestPage(),
   ];
 
@@ -37,6 +39,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     '上传文件',
     '读取剪切板',
     'WebView',
+    '上下文菜单',
     '测试专用',
   ];
 

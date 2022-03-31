@@ -7,6 +7,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   desktop_webview_window
   file_selector_windows
   local_notifier
+  native_context_menu
   pasteboard
   screen_capturer
   screen_text_extractor

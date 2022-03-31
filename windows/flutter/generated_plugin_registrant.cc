@@ -10,6 +10,7 @@
 #include <desktop_webview_window/desktop_webview_window_plugin.h>
 #include <file_selector_windows/file_selector_windows.h>
 #include <local_notifier/local_notifier_plugin.h>
+#include <native_context_menu/native_context_menu_plugin.h>
 #include <pasteboard/pasteboard_plugin.h>
 #include <screen_capturer/screen_capturer_plugin.h>
 #include <screen_text_extractor/screen_text_extractor_plugin.h>
@@ -28,6 +29,8 @@ void RegisterPlugins(flutter::PluginRegistry* registry) {
       registry->GetRegistrarForPlugin("FileSelectorWindows"));
   LocalNotifierPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("LocalNotifierPlugin"));
+  NativeContextMenuPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("NativeContextMenuPlugin"));
   PasteboardPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("PasteboardPlugin"));
   ScreenCapturerPluginRegisterWithRegistrar(

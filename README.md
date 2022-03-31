@@ -29,6 +29,10 @@
 - [x] 打开Web窗口 —— [desktop_webview_window](https://pub.dev/packages/desktop_webview_window)
 
   > 详细教程：[Flutter桌面端开发——WebView](https://juejin.cn/post/7078481800846114847/)
+  
+- [ ] 上下文菜单 —— [context_menus](https://pub.dev/packages/context_menus) 、[contextmenu](https://pub.dev/packages/contextmenu) 、[native_context_menu](https://pub.dev/packages/native_context_menu)
+
+  > 详细教程：[Flutter桌面端开发——上下文菜单](https://juejin.cn/post/7081069597591339039/)
 
 一些辅助插件：
 
