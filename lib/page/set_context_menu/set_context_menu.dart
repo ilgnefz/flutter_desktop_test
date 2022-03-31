@@ -5,7 +5,7 @@ import 'use_contextmenu.dart';
 import 'use_native_context_menu.dart';
 
 const String cmImage =
-    'https://gitee.com/ilgnefz/image-house/raw/master/images/202203231144213.jpeg';
+    'https://bkimg.cdn.bcebos.com/pic/21a4462309f790529822c43462b9c0ca7bcb0a467f2c?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5/format,f_auto';
 const String cmTitle = '蚍蜉渡海';
 final List<String> cmSongs = ['裁梦为魂', '如一', '不老梦', '是风动', '卑微情书'];
 
