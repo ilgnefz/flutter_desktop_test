@@ -36,7 +36,7 @@
   
 - [x] MouseRegion组件
 
-  > 简单介绍：[[鼠标事件组件MouseRegion](https://www.cnblogs.com/ilgnefz/p/16141838.html)](https://www.cnblogs.com/ilgnefz/p/16141838.html)
+  > 简单介绍：[鼠标事件组件MouseRegion](https://www.cnblogs.com/ilgnefz/p/16141838.html)
 
 一些辅助插件：
 
