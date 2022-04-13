@@ -20,8 +20,9 @@ void main(List<String> args) async {
   windowManager.waitUntilReadyToShow().then((_) async {
     await windowManager.setTitle('我的第一个桌面应用');
     await windowManager.setSize(const Size(800, 600));
+    // await windowManager.maximize();
     await windowManager.setMinimumSize(const Size(800, 600));
-    await windowManager.center();
+    // await windowManager.center();
     await windowManager.show();
     // await windowManager.setSkipTaskbar(false);
   });

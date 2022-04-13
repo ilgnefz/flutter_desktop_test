@@ -33,6 +33,10 @@
 - [x] 上下文菜单 —— [context_menus](https://pub.dev/packages/context_menus) 、[contextmenu](https://pub.dev/packages/contextmenu) 、[native_context_menu](https://pub.dev/packages/native_context_menu)
 
   > 详细教程：[Flutter桌面端开发——上下文菜单](https://juejin.cn/post/7081069597591339039/)
+  
+- [x] MouseRegion组件
+
+  > 简单介绍：[[鼠标事件组件MouseRegion](https://www.cnblogs.com/ilgnefz/p/16141838.html)](https://www.cnblogs.com/ilgnefz/p/16141838.html)
 
 一些辅助插件：
 
