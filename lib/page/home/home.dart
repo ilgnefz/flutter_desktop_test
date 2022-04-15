@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/page/about_mouse/about_mouse.dart';
+import 'package:flutter_desktop_test/page/custom_tooltip/custom_tooltip.dart';
 import 'package:flutter_desktop_test/page/desktop_test/desktop_test.dart';
 import 'package:flutter_desktop_test/page/drop_file/drop_file.dart';
 import 'package:flutter_desktop_test/page/read_clipboard/read_clipboard.dart';
@@ -30,6 +31,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     const UseWebView(),
     const SetContextMenuPage(),
     const AboutMousePage(),
+    const CustomTooltip(),
     const DesktopTestPage(),
   ];
 
@@ -43,6 +45,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     'WebView',
     '上下文菜单',
     '鼠标事件',
+    '自定义Tooltip',
     '测试专用',
   ];
 
