@@ -17,8 +17,10 @@ void main(List<String> args) async {
 
   await windowManager.ensureInitialized();
 
+  LocalNotifier.instance.setAppName('Flutter桌面应用');
+
   windowManager.waitUntilReadyToShow().then((_) async {
-    await windowManager.setTitle('我的第一个桌面应用');
+    await windowManager.setTitle('Flutter桌面应用');
     await windowManager.setSize(const Size(800, 600));
     // await windowManager.maximize();
     await windowManager.setMinimumSize(const Size(800, 600));
@@ -53,5 +55,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-final localNotifier = LocalNotifier.instance;

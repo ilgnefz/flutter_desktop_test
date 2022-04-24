@@ -161,7 +161,7 @@ packages:
       name: file_selector
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.8.4"
+    version: "0.8.4+1"
   file_selector_macos:
     dependency: transitive
     description:
@@ -260,7 +260,7 @@ packages:
       name: local_notifier
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.1.1"
+    version: "0.1.2"
   matcher:
     dependency: transitive
     description:
@@ -302,7 +302,7 @@ packages:
       name: pasteboard
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.0.2"
+    version: "0.0.3"
   path:
     dependency: transitive
     description:
@@ -393,7 +393,7 @@ packages:
       name: screen_capturer
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.1.0"
+    version: "0.1.2"
   screen_text_extractor:
     dependency: "direct main"
     description:
@@ -475,7 +475,7 @@ packages:
       name: url_launcher
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "6.0.20"
+    version: "6.1.0"
   url_launcher_android:
     dependency: transitive
     description:
@@ -545,7 +545,7 @@ packages:
       name: win32
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.4.1"
+    version: "2.5.1"
   win_toast:
     dependency: "direct main"
     description:
@@ -559,7 +559,7 @@ packages:
       name: window_manager
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.2.0"
+    version: "0.2.1"
   xdg_directories:
     dependency: transitive
     description:
