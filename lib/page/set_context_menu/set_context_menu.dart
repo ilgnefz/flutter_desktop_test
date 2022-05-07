@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/page/set_context_menu/use_context_menu.dart';
+import 'package:flutter_desktop_test/page/set_context_menu/use_desktop_context_menu.dart';
 
 import 'use_contextmenu.dart';
 import 'use_native_context_menu.dart';
@@ -21,12 +22,14 @@ class _SetContextMenuPageState extends State<SetContextMenuPage> {
     UseContextMenu(),
     UseContextmenu(),
     UseNativeContextMenu(),
+    UseDesktopContextMenu(),
   ];
 
   final List<String> _titles = [
     'context_menus',
     'contextmenus',
     'native_context_menu',
+    'desktop_context_menu',
   ];
 
   int _current = 0;

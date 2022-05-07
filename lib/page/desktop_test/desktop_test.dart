@@ -1,5 +1,9 @@
+import 'dart:io';
+
+import 'package:desktop_context_menu/desktop_context_menu.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:native_context_menu/native_context_menu.dart';
+import 'package:flutter/services.dart';
 
 class DesktopTestPage extends StatefulWidget {
   const DesktopTestPage({Key? key}) : super(key: key);
@@ -9,37 +13,112 @@ class DesktopTestPage extends StatefulWidget {
 }
 
 class _DesktopTestPageState extends State<DesktopTestPage> {
-  String? action;
+  bool _openContextMenu = false;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: ContextMenuRegion(
-          onDismissed: () => setState(() => action = 'Menu was dismissed'),
-          onItemSelected: (item) => setState(() {
-            action = '${item.title} was selected';
-          }),
-          menuItems: [
-            MenuItem(title: 'First item'),
-            MenuItem(title: 'Second item'),
-            MenuItem(
-              title: 'Third item with submenu',
-              items: [
-                MenuItem(title: 'First subitem'),
-                MenuItem(title: 'Second subitem'),
-                MenuItem(title: 'Third subitem'),
-              ],
-            ),
-            MenuItem(title: 'Fourth item'),
-          ],
-          child: Card(
-            child: Center(
-              child: Text(action ?? 'Right click me'),
-            ),
-          ),
-        ),
+    return Listener(
+      /// Listener.onPointerUp cannot check if the clicked mouse button is
+      /// the secondary one.
+      onPointerDown: (event) {
+        _openContextMenu = event.kind == PointerDeviceKind.mouse &&
+            event.buttons == kSecondaryMouseButton;
+      },
+      onPointerUp: (event) {
+        if (!_openContextMenu) {
+          return;
+        }
+
+        _openContextMenu = false;
+
+        _showContextMenu();
+      },
+      child: const Center(
+        child: Text('right click anywhere to open context menu'),
       ),
     );
+  }
+
+  void _showContextMenu() async {
+    final selectedItem = await showContextMenu(
+      menuItems: [
+        ContextMenuItem(
+          title: 'Copy',
+          onTap: () {
+            print('CCCCCCCCCCCCC');
+          },
+          shortcut: SingleActivator(
+            LogicalKeyboardKey.keyC,
+            meta: Platform.isMacOS,
+            control: Platform.isWindows,
+          ),
+        ),
+        ContextMenuItem(
+          title: 'Paste',
+          onTap: () {},
+          shortcut: SingleActivator(
+            LogicalKeyboardKey.keyV,
+            meta: Platform.isMacOS,
+            control: Platform.isWindows,
+          ),
+        ),
+        ContextMenuItem(
+          title: 'Paste as values',
+          onTap: () {},
+          shortcut: SingleActivator(
+            LogicalKeyboardKey.keyV,
+            meta: Platform.isMacOS,
+            control: Platform.isWindows,
+            shift: true,
+          ),
+        ),
+        const ContextMenuSeparator(),
+        ContextMenuItem(
+          title: 'Item number two',
+          onTap: () {},
+        ),
+        const ContextMenuItem(title: 'Disabled item'),
+        const ContextMenuItem(
+          title: 'Disabled item with shortcut',
+          shortcut: SingleActivator(
+            LogicalKeyboardKey.keyV,
+            meta: true,
+            shift: true,
+          ),
+        ),
+        const ContextMenuSeparator(),
+        ContextMenuItem(
+          title: 'Zoom in',
+          shortcut: const SingleActivator(
+            LogicalKeyboardKey.add,
+            alt: true,
+          ),
+          onTap: () {},
+        ),
+        ContextMenuItem(
+          title: 'Zoom out',
+          shortcut: const SingleActivator(
+            LogicalKeyboardKey.minus,
+            alt: true,
+          ),
+          onTap: () {},
+        ),
+        const ContextMenuSeparator(),
+        ContextMenuItem(
+          title: 'Control shortcut',
+          shortcut: const SingleActivator(
+            LogicalKeyboardKey.keyJ,
+            control: true,
+          ),
+          onTap: () {},
+        ),
+      ],
+    );
+
+    if (selectedItem == null) {
+      return null;
+    }
+
+    print(selectedItem.title);
   }
 }

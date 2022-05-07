@@ -106,6 +106,34 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.4"
+  desktop_context_menu:
+    dependency: "direct main"
+    description:
+      name: desktop_context_menu
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.1"
+  desktop_context_menu_macos:
+    dependency: transitive
+    description:
+      name: desktop_context_menu_macos
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.1"
+  desktop_context_menu_platform_interface:
+    dependency: transitive
+    description:
+      name: desktop_context_menu_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.1"
+  desktop_context_menu_windows:
+    dependency: transitive
+    description:
+      name: desktop_context_menu_windows
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.1"
   desktop_drop:
     dependency: "direct main"
     description:
