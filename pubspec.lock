@@ -57,6 +57,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.3"
+  clipboard_watcher:
+    dependency: transitive
+    description:
+      name: clipboard_watcher
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.2"
   clock:
     dependency: transitive
     description:
@@ -85,20 +92,27 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.0.0"
+  contextual_menu:
+    dependency: "direct main"
+    description:
+      name: contextual_menu
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.0"
   cross_file:
     dependency: "direct main"
     description:
       name: cross_file
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.3.2"
+    version: "0.3.3"
   crypto:
     dependency: transitive
     description:
       name: crypto
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "3.0.1"
+    version: "3.0.2"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -254,6 +268,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  hotkey_manager:
+    dependency: "direct main"
+    description:
+      name: hotkey_manager
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.7"
   http:
     dependency: transitive
     description:
@@ -288,7 +309,7 @@ packages:
       name: local_notifier
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.1.2"
+    version: "0.1.4"
   matcher:
     dependency: transitive
     description:
@@ -303,6 +324,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.3"
+  menu_base:
+    dependency: transitive
+    description:
+      name: menu_base
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.0"
   meta:
     dependency: transitive
     description:
@@ -351,7 +379,7 @@ packages:
       name: path_provider_android
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.12"
+    version: "2.0.13"
   path_provider_ios:
     dependency: transitive
     description:
@@ -428,7 +456,14 @@ packages:
       name: screen_text_extractor
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.1.0"
+    version: "0.1.2"
+  shortid:
+    dependency: transitive
+    description:
+      name: shortid
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -489,7 +524,7 @@ packages:
       name: tray_manager
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.1.4"
+    version: "0.1.5"
   typed_data:
     dependency: transitive
     description:
@@ -510,7 +545,7 @@ packages:
       name: url_launcher_android
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "6.0.15"
+    version: "6.0.16"
   url_launcher_ios:
     dependency: transitive
     description:
@@ -573,7 +608,7 @@ packages:
       name: win32
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.5.1"
+    version: "2.5.2"
   win_toast:
     dependency: "direct main"
     description:
@@ -587,7 +622,7 @@ packages:
       name: window_manager
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.2.1"
+    version: "0.2.3"
   xdg_directories:
     dependency: transitive
     description:

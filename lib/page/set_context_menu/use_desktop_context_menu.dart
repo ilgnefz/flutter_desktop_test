@@ -98,5 +98,6 @@ class _UseDesktopContextMenuState extends State<UseDesktopContextMenu> {
     );
     if (_menu == null) return;
     BotToast.showText(text: _menu.title ?? '');
+    _menu.onTap?.call();
   }
 }

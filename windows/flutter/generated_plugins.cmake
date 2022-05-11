@@ -3,10 +3,13 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  clipboard_watcher
+  contextual_menu
   desktop_context_menu_windows
   desktop_drop
   desktop_webview_window
   file_selector_windows
+  hotkey_manager
   local_notifier
   native_context_menu
   pasteboard

@@ -16,6 +16,8 @@ class UseTextExtractor extends StatefulWidget {
 }
 
 class _UseTextExtractorState extends State<UseTextExtractor> {
+  final screenTextExtractor = ScreenTextExtractor.instance;
+
   String? _img;
   String? _text;
   ClipboardType? _type;
@@ -37,8 +39,8 @@ class _UseTextExtractorState extends State<UseTextExtractor> {
   }
 
   void _getClipboardText() async {
-    ExtractedData data =
-        await ScreenTextExtractor.instance.extractFromClipboard();
+    ExtractedData? data =
+        await screenTextExtractor.extract(mode: ExtractMode.clipboard);
     _setText(data);
   }
 
@@ -48,18 +50,19 @@ class _UseTextExtractorState extends State<UseTextExtractor> {
   // }
 
   void _getScreenSelectionText() async {
-    ExtractedData data =
-        await ScreenTextExtractor.instance.extractFromScreenSelection(
-      useAccessibilityAPIFirst: false, // 使用辅助功能API，仅macOS
+    print('!!!!!!!!!!!!');
+    // 通过模拟按下 Ctrl+C 快捷键以达到取词的目的
+    ExtractedData? data = await screenTextExtractor.extract(
+      mode: ExtractMode.screenSelection,
     );
     _setText(data);
   }
 
-  void _setText(ExtractedData data) {
-    if (data.text!.isEmpty) {
+  void _setText(ExtractedData? data) {
+    if (data == null) {
       BotToast.showText(text: '剪切板什么都没有🤨');
     } else {
-      if (_text == data.text!) {
+      if (_text == data.text) {
         BotToast.showText(text: '换个内容再粘贴吧🥱');
       } else {
         _text = data.text;
@@ -90,9 +93,10 @@ class _UseTextExtractorState extends State<UseTextExtractor> {
                     onPressed: _getClipboardText,
                     child: const Text('从剪切板获取'),
                   ),
-                  ElevatedButton(
-                    onPressed: _getScreenSelectionText,
-                    child: const Text('从选区获取(win不可用)'),
+                  const ElevatedButton(
+                    // onPressed: _getScreenSelectionText,
+                    onPressed: null,
+                    child: Text('screenSelection'),
                   ),
                 ],
               )

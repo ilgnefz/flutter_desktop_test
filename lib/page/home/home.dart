@@ -3,6 +3,7 @@ import 'package:flutter_desktop_test/page/about_mouse/about_mouse.dart';
 import 'package:flutter_desktop_test/page/custom_tooltip/custom_tooltip.dart';
 import 'package:flutter_desktop_test/page/desktop_test/desktop_test.dart';
 import 'package:flutter_desktop_test/page/drop_file/drop_file.dart';
+import 'package:flutter_desktop_test/page/hot_key/hot_key.dart';
 import 'package:flutter_desktop_test/page/read_clipboard/read_clipboard.dart';
 import 'package:flutter_desktop_test/page/send_notify/send_notify.dart';
 import 'package:flutter_desktop_test/page/set_context_menu/set_context_menu.dart';
@@ -32,6 +33,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     const SetContextMenuPage(),
     const AboutMousePage(),
     const CustomTooltip(),
+    const HotKeyPage(),
     const DesktopTestPage(),
   ];
 
@@ -46,6 +48,7 @@ class _HomePageState extends State<HomePage> with WindowListener {
     '上下文菜单',
     '鼠标事件',
     '自定义Tooltip',
+    '快捷键',
     '测试专用',
   ];
 

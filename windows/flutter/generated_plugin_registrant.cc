@@ -6,10 +6,13 @@
 
 #include "generated_plugin_registrant.h"
 
+#include <clipboard_watcher/clipboard_watcher_plugin.h>
+#include <contextual_menu/contextual_menu_plugin.h>
 #include <desktop_context_menu_windows/desktop_context_menu_windows_plugin.h>
 #include <desktop_drop/desktop_drop_plugin.h>
 #include <desktop_webview_window/desktop_webview_window_plugin.h>
 #include <file_selector_windows/file_selector_windows.h>
+#include <hotkey_manager/hotkey_manager_plugin.h>
 #include <local_notifier/local_notifier_plugin.h>
 #include <native_context_menu/native_context_menu_plugin.h>
 #include <pasteboard/pasteboard_plugin.h>
@@ -22,6 +25,10 @@
 #include <window_manager/window_manager_plugin.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
+  ClipboardWatcherPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("ClipboardWatcherPlugin"));
+  ContextualMenuPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("ContextualMenuPlugin"));
   DesktopContextMenuWindowsPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("DesktopContextMenuWindowsPlugin"));
   DesktopDropPluginRegisterWithRegistrar(
@@ -30,6 +37,8 @@ void RegisterPlugins(flutter::PluginRegistry* registry) {
       registry->GetRegistrarForPlugin("DesktopWebviewWindowPlugin"));
   FileSelectorWindowsRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("FileSelectorWindows"));
+  HotkeyManagerPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("HotkeyManagerPlugin"));
   LocalNotifierPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("LocalNotifierPlugin"));
   NativeContextMenuPluginRegisterWithRegistrar(

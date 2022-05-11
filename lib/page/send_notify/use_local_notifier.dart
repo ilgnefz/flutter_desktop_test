@@ -27,7 +27,8 @@ class _UseLocalNotifierState extends State<UseLocalNotifier> {
     notification.onShow = () {
       BotToast.showText(text: '显示了一条通知');
     };
-    notification.onClose = () {
+    // TODO
+    notification.onClose = (vale) {
       BotToast.showText(text: '通知已经关闭');
     };
     notification.onClick = () {

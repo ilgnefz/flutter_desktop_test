@@ -30,7 +30,7 @@
 
   > 详细教程：[Flutter桌面端开发——WebView](https://juejin.cn/post/7078481800846114847/)
   
-- [x] 上下文菜单 —— [context_menus](https://pub.dev/packages/context_menus) 、[contextmenu](https://pub.dev/packages/contextmenu) 、[native_context_menu](https://pub.dev/packages/native_context_menu)
+- [x] 上下文菜单 —— [context_menus](https://pub.dev/packages/context_menus) 、[contextmenu](https://pub.dev/packages/contextmenu) 、[native_context_menu](https://pub.dev/packages/native_context_menu)、[desktop_context_menu](https://pub.dev/packages/desktop_context_menu)、[contextual_menu](https://pub.dev/packages/contextual_menu)
 
   > 详细教程：[Flutter桌面端开发——上下文菜单](https://juejin.cn/post/7081069597591339039/)
   
@@ -41,6 +41,10 @@
 - [x] 自定义Tooltip
 
   > 简单教程：[Flutter自定义Tooltip](https://www.cnblogs.com/ilgnefz/p/16143779.html)
+
+- [x] 快捷键的使用 —— [hotkey_manager](https://pub.dev/packages/hotkey_manager)
+  > 详细教程：[Flutter桌面端开发——快捷键](https://www.cnblogs.com/ilgnefz/p/16257263.html)
+  
 
 一些辅助插件：
 

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/page/hot_key/use_flutter_widget.dart';
-import 'package:flutter_desktop_test/page/read_clipboard/use_text_extractor.dart';
+import 'package:flutter_desktop_test/page/hot_key/use_hotkey_manager.dart';
 
-class ReadClipboardPage extends StatefulWidget {
-  const ReadClipboardPage({Key? key}) : super(key: key);
+class HotKeyPage extends StatefulWidget {
+  const HotKeyPage({Key? key}) : super(key: key);
 
   @override
-  State<ReadClipboardPage> createState() => _ReadClipboardPageState();
+  State<HotKeyPage> createState() => _HotKeyPageState();
 }
 
-class _ReadClipboardPageState extends State<ReadClipboardPage> {
+class _HotKeyPageState extends State<HotKeyPage> {
   bool _flag = true;
 
   void _switchFlag() {
@@ -24,7 +24,7 @@ class _ReadClipboardPageState extends State<ReadClipboardPage> {
         onPressed: _switchFlag,
         child: const Icon(Icons.autorenew),
       ),
-      body: _flag ? const UseTextExtractor() : const UseFlutterWidget(),
+      body: _flag ? const UseHotKeyManager() : const UseFlutterWidget(),
     );
   }
 }

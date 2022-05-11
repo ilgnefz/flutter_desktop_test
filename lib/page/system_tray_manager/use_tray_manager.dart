@@ -70,32 +70,32 @@ class _UseTrayManagerPageState extends State<UseTrayManagerPage>
   }
 
   void _generateContextMenu() async {
-    List<MenuItem> items = [
-      MenuItem(title: '语文'),
-      MenuItem(title: '数学', toolTip: '躲不掉的'),
-      MenuItem(title: '英语', isEnabled: false),
-      MenuItem.separator,
-      MenuItem(
+    Menu _menu = Menu(items: [
+      MenuItem(label: '语文'),
+      MenuItem(label: '数学', toolTip: '躲不掉的'),
+      MenuItem(label: '英语', checked: false),
+      MenuItem.separator(),
+      MenuItem.submenu(
         key: 'science',
-        title: '理科',
-        items: [
-          MenuItem(title: '物理'),
-          MenuItem(title: '化学'),
-          MenuItem(title: '生物'),
-        ],
+        label: '理科',
+        submenu: Menu(items: [
+          MenuItem(label: '物理'),
+          MenuItem(label: '化学'),
+          MenuItem(label: '生物'),
+        ]),
       ),
-      MenuItem.separator,
-      MenuItem(
+      MenuItem.separator(),
+      MenuItem.submenu(
         key: 'arts',
-        title: '文科',
-        items: [
-          MenuItem(title: '政治'),
-          MenuItem(title: '历史'),
-          MenuItem(title: '地理'),
-        ],
+        label: '文科',
+        submenu: Menu(items: [
+          MenuItem(label: '政治'),
+          MenuItem(label: '历史'),
+          MenuItem(label: '地理'),
+        ]),
       ),
-    ];
-    await trayManager.setContextMenu(items);
+    ]);
+    await trayManager.setContextMenu(_menu);
   }
 
   void _getBound() async {
@@ -148,7 +148,7 @@ class _UseTrayManagerPageState extends State<UseTrayManagerPage>
 
   @override
   void onTrayMenuItemClick(MenuItem menuItem) {
-    BotToast.showText(text: '你选择了${menuItem.title}');
+    BotToast.showText(text: '你选择了${menuItem.label}');
   }
 
   @override
