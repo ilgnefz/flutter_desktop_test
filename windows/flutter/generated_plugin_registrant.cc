@@ -14,11 +14,9 @@
 #include <file_selector_windows/file_selector_windows.h>
 #include <hotkey_manager/hotkey_manager_plugin.h>
 #include <local_notifier/local_notifier_plugin.h>
-#include <native_context_menu/native_context_menu_plugin.h>
 #include <pasteboard/pasteboard_plugin.h>
 #include <screen_capturer/screen_capturer_plugin.h>
 #include <screen_text_extractor/screen_text_extractor_plugin.h>
-#include <system_tray/system_tray_plugin.h>
 #include <tray_manager/tray_manager_plugin.h>
 #include <url_launcher_windows/url_launcher_windows.h>
 #include <win_toast/win_toast_plugin.h>
@@ -41,16 +39,12 @@ void RegisterPlugins(flutter::PluginRegistry* registry) {
       registry->GetRegistrarForPlugin("HotkeyManagerPlugin"));
   LocalNotifierPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("LocalNotifierPlugin"));
-  NativeContextMenuPluginRegisterWithRegistrar(
-      registry->GetRegistrarForPlugin("NativeContextMenuPlugin"));
   PasteboardPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("PasteboardPlugin"));
   ScreenCapturerPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("ScreenCapturerPlugin"));
   ScreenTextExtractorPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("ScreenTextExtractorPlugin"));
-  SystemTrayPluginRegisterWithRegistrar(
-      registry->GetRegistrarForPlugin("SystemTrayPlugin"));
   TrayManagerPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("TrayManagerPlugin"));
   UrlLauncherWindowsRegisterWithRegistrar(

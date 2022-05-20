@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:win_toast/win_toast.dart';
 
 class CustomTooltip extends StatefulWidget {
   const CustomTooltip({Key? key}) : super(key: key);

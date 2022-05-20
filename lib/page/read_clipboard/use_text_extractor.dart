@@ -4,7 +4,6 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/widgets/image_decorated.dart';
 import 'package:flutter_desktop_test/widgets/title_divider.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:screen_capturer/screen_capturer.dart';
 import 'package:screen_text_extractor/screen_text_extractor.dart';
 
@@ -23,7 +22,7 @@ class _UseTextExtractorState extends State<UseTextExtractor> {
   ClipboardType? _type;
 
   void _screenShot() async {
-    Directory _dir = await getApplicationDocumentsDirectory();
+    // Directory _dir = await getApplicationDocumentsDirectory();
     String _imageName = '${DateTime.now().millisecondsSinceEpoch}.png';
     // String _imagePath ='${_dir.path}/$_imageName';
     String _imagePath = 'C:\\Users\\ilgnefz\\Pictures\\$_imageName';
@@ -49,14 +48,13 @@ class _UseTextExtractorState extends State<UseTextExtractor> {
   //   print(data);
   // }
 
-  void _getScreenSelectionText() async {
-    print('!!!!!!!!!!!!');
-    // 通过模拟按下 Ctrl+C 快捷键以达到取词的目的
-    ExtractedData? data = await screenTextExtractor.extract(
-      mode: ExtractMode.screenSelection,
-    );
-    _setText(data);
-  }
+  // void _getScreenSelectionText() async {
+  //   // 通过模拟按下 Ctrl+C 快捷键以达到取词的目的
+  //   ExtractedData? data = await screenTextExtractor.extract(
+  //     mode: ExtractMode.screenSelection,
+  //   );
+  //   _setText(data);
+  // }
 
   void _setText(ExtractedData? data) {
     if (data == null) {

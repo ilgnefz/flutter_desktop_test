@@ -19,14 +19,15 @@ void main(List<String> args) async {
 
   LocalNotifier.instance.setAppName('Flutter桌面应用');
 
-  windowManager.waitUntilReadyToShow().then((_) async {
-    await windowManager.setTitle('Flutter桌面应用');
-    await windowManager.setSize(const Size(800, 600));
-    // await windowManager.maximize();
-    await windowManager.setMinimumSize(const Size(800, 600));
-    // await windowManager.center();
+  WindowOptions windowOptions = WindowOptions(
+    title: 'Flutter桌面应用',
+    size: const Size(800, 600),
+    minimumSize: const Size(800, 600),
+  );
+
+  windowManager.waitUntilReadyToShow(windowOptions, () async {
     await windowManager.show();
-    // await windowManager.setSkipTaskbar(false);
+    await windowManager.focus();
   });
 
   runApp(const MyApp());

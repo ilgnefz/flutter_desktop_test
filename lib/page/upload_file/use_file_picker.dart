@@ -41,7 +41,7 @@ class _UseFilePickerPageState extends State<UseFilePickerPage> {
     FilePickerResult? result = await FilePicker.platform.pickFiles();
     if (result != null) {
       PlatformFile file = result.files.single;
-      print(file);
+      // print(file);
       widget.provider.setFile(file);
       widget.provider.setFileType('imageDetail');
     }

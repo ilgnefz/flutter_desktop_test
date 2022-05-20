@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_desktop_test/widgets/title_divider.dart';
 
 class UseClipboard extends StatelessWidget {
   const UseClipboard({

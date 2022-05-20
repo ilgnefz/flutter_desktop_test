@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 // import 'dart:typed_data';
 
 import 'package:bot_toast/bot_toast.dart';
@@ -26,7 +27,7 @@ class _UsePasteboardState extends State<UsePasteboard> {
   void _openExplorer() async {
     const _filePath = r'C:\Users\ilgnefz\Pictures';
     final Uri _uri = Uri.file(_filePath);
-    await launch(_uri.toString());
+    await launchUrl(_uri);
   }
 
   void _copyText() async {

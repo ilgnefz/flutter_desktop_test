@@ -4,7 +4,6 @@ import 'package:flutter_desktop_test/page/set_context_menu/use_context_menu.dart
 import 'package:flutter_desktop_test/page/set_context_menu/use_desktop_context_menu.dart';
 
 import 'use_contextmenu.dart';
-import 'use_native_context_menu.dart';
 
 const String cmImage =
     'https://bkimg.cdn.bcebos.com/pic/21a4462309f790529822c43462b9c0ca7bcb0a467f2c?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5/format,f_auto';
@@ -22,7 +21,7 @@ class _SetContextMenuPageState extends State<SetContextMenuPage> {
   final List<Widget> _children = const [
     UseContextMenu(),
     UseContextmenu(),
-    UseNativeContextMenu(),
+    // UseNativeContextMenu(),
     UseDesktopContextMenu(),
     UseContextualMenu(),
   ];
@@ -30,7 +29,7 @@ class _SetContextMenuPageState extends State<SetContextMenuPage> {
   final List<String> _titles = [
     'context_menus',
     'contextmenus',
-    'native_context_menu',
+    // 'native_context_menu',
     'desktop_context_menu',
     'contextual_menu',
   ];

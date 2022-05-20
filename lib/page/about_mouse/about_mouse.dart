@@ -17,7 +17,7 @@ class _AboutMousePageState extends State<AboutMousePage> {
     return Center(
       child: MouseRegion(
         onEnter: (PointerEnterEvent e) {
-          print('platformData: ${e.embedderId}');
+          // print('platformData: ${e.embedderId}');
           setState(() {
             _message = '鼠标进来了';
           });

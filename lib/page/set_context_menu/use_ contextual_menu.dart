@@ -1,7 +1,7 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:contextual_menu/contextual_menu.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide MenuItem;
 
 class UseContextualMenu extends StatefulWidget {
   const UseContextualMenu({Key? key}) : super(key: key);

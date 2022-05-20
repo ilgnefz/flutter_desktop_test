@@ -10,7 +10,7 @@
 
   > 详细教程：[Flutter桌面端开发——发送本地悬浮通知🔔](https://juejin.cn/post/7074482758747160590)
 
-- [x] 应用系统托盘管理 —— [tray_manager](https://pub.dev/packages/tray_manager) 、[system_tray](https://pub.dev/packages/system_tray)
+- [x] 应用系统托盘管理 —— [tray_manager](https://pub.dev/packages/tray_manager) 、~~[system_tray](https://pub.dev/packages/system_tray)~~
 
   > 详细教程：[Flutter桌面端开发——系统托盘](https://juejin.cn/post/7074873704773058568)
 
@@ -30,7 +30,7 @@
 
   > 详细教程：[Flutter桌面端开发——WebView](https://juejin.cn/post/7078481800846114847/)
   
-- [x] 上下文菜单 —— [context_menus](https://pub.dev/packages/context_menus) 、[contextmenu](https://pub.dev/packages/contextmenu) 、[native_context_menu](https://pub.dev/packages/native_context_menu)、[desktop_context_menu](https://pub.dev/packages/desktop_context_menu)、[contextual_menu](https://pub.dev/packages/contextual_menu)
+- [x] 上下文菜单 —— [context_menus](https://pub.dev/packages/context_menus) 、[contextmenu](https://pub.dev/packages/contextmenu) 、~~[native_context_menu](https://pub.dev/packages/native_context_menu)~~、[desktop_context_menu](https://pub.dev/packages/desktop_context_menu)、[contextual_menu](https://pub.dev/packages/contextual_menu)
 
   > 详细教程：[Flutter桌面端开发——上下文菜单](https://juejin.cn/post/7081069597591339039/)
   
