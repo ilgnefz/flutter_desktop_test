@@ -63,14 +63,14 @@ dependencies:
   dotted_decoration: ^2.0.0
   url_launcher: ^6.1.2
   path_provider: ^2.0.10
-  provider: ^6.0.2
+  provider: ^6.0.3
   flutter_staggered_grid_view: ^0.6.1
   # preference_list: ^0.0.1
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.4
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:bot_toast/bot_toast.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/providers/upload_file.dart';
@@ -48,11 +49,14 @@ class _UseFilePickerPageState extends State<UseFilePickerPage> {
   }
 
   void _saveFile() async {
-    String? outputFile = await FilePicker.platform.saveFile(
-      fileName: 'hello',
-      allowedExtensions: ['txt'],
-    );
-    if (outputFile != null) {}
+    String? outputFile =
+        await FilePicker.platform.saveFile(fileName: 'hello.txt');
+    if (outputFile != null) {
+      File file = File(outputFile);
+      await file.writeAsString('Hello World');
+      await file.create();
+      BotToast.showText(text: '文件存储成功');
+    }
   }
 
   void _pickDir() async {

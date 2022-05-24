@@ -435,7 +435,7 @@ packages:
       name: provider
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "6.0.2"
+    version: "6.0.3"
   screen_capturer:
     dependency: "direct main"
     description:
