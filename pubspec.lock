@@ -105,7 +105,7 @@ packages:
       name: cross_file
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.3.3"
+    version: "0.3.3+1"
   crypto:
     dependency: transitive
     description:
@@ -196,7 +196,7 @@ packages:
       name: file_picker
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "4.5.1"
+    version: "4.6.0"
   file_selector:
     dependency: "direct main"
     description:
@@ -351,7 +351,7 @@ packages:
       name: pasteboard
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.0.3"
+    version: "0.1.0"
   path:
     dependency: transitive
     description:

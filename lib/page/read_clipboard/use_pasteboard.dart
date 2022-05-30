@@ -22,11 +22,10 @@ class _UsePasteboardState extends State<UsePasteboard> {
   final TextEditingController _controller = TextEditingController();
 
   String _text = '还没粘贴任何内容';
-  // Uint8List? _image;
 
   void _openExplorer() async {
     const _filePath = r'C:\Users\ilgnefz\Pictures';
-    final Uri _uri = Uri.file(_filePath);
+    final Uri _uri = Uri.file(_filePath, windows: true);
     await launchUrl(_uri);
   }
 
@@ -34,12 +33,26 @@ class _UsePasteboardState extends State<UsePasteboard> {
     if (_controller.text.isEmpty) {
       BotToast.showText(text: '啥都没输入，你要我复制什么🥴');
     } else {
-      final lines = const LineSplitter().convert(_controller.text);
-      await Pasteboard.writeFiles(lines);
+      Pasteboard.writeText(_controller.text);
     }
   }
 
   void _pastText() async {
+    String? results = await Pasteboard.text;
+    _text = results ?? '啥都没有';
+    setState(() {});
+  }
+
+void _copyFile() async {
+  if (_controller.text.isEmpty) {
+    BotToast.showText(text: '啥都没输入，你要我复制什么🥴');
+  } else {
+    final lines = const LineSplitter().convert(_controller.text);
+    await Pasteboard.writeFiles(lines);
+  }
+}
+
+  void _pastFile() async {
     final results = await Pasteboard.files();
     if (results.isNotEmpty) {
       // _text = results.toString();
@@ -52,21 +65,6 @@ class _UsePasteboardState extends State<UsePasteboard> {
       BotToast.showText(text: '我什么都不能给你，因为我也咩有😭');
     }
   }
-
-  // void _copyImage() async {
-  //   if (_controller.text.isNotEmpty) {
-  //     Uint8List? image = base64Decode(_controller.text);
-  //     await Pasteboard.writeImage(image);
-  //   } else {
-  //     BotToast.showText(text: '啥都没输入，你要我复制什么🥴');
-  //   }
-  // }
-  //
-  // void _pastImage() async {
-  //   final results = await Pasteboard.image;
-  //   _image = results;
-  //   setState(() {});
-  // }
 
   void _useCtrC() async {
     if (_controller.text.isEmpty) {
@@ -158,7 +156,11 @@ class _UsePasteboardState extends State<UsePasteboard> {
                   ElevatedButton(
                       onPressed: _copyText, child: const Text('复制文本')),
                   ElevatedButton(
-                      onPressed: _pastText, child: const Text('粘贴文本/文件')),
+                      onPressed: _pastText, child: const Text('粘贴文本')),
+                  ElevatedButton(
+                      onPressed: _copyFile, child: const Text('复制文件')),
+                  ElevatedButton(
+                      onPressed: _pastFile, child: const Text('粘贴文件')),
                   // ElevatedButton(onPressed: _copyImage, child: const Text('复制图片')),
                   // ElevatedButton(onPressed: _pastImage, child: const Text('粘贴图片')),
                 ],
