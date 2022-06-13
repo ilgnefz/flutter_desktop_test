@@ -17,8 +17,9 @@ class UseFileSelectorPage extends StatefulWidget {
 
 class _UseFileSelectorPageState extends State<UseFileSelectorPage> {
   void _pickOneImage() async {
-    const label = 'image';
-    final xType = XTypeGroup(label: label, extensions: ['jpg', 'png']);
+    const String label = 'image';
+    final XTypeGroup xType =
+        XTypeGroup(label: label, extensions: ['jpg', 'png']);
     final XFile? file = await openFile(
       acceptedTypeGroups: [xType],
       // initialDirectory: r'C:\Users\ilgnefz\Pictures',
@@ -67,20 +68,23 @@ class _UseFileSelectorPageState extends State<UseFileSelectorPage> {
   }
 
   void _saveTextFile() async {
-    final String? path = await getSavePath();
+    final String title = widget.provider.title;
+    final String content = widget.provider.txtContent;
+    final Uint8List fileData = const Utf8Encoder().convert(content);
+// final Uint8List fileData = Uint8List.fromList(content.codeUnits);
+    final String? path = await getSavePath(
+      acceptedTypeGroups: [
+        XTypeGroup(label: '文本', extensions: ['txt']),
+      ],
+      initialDirectory: r'C:\Users\ilgnefz\Pictures',
+      suggestedName: title,
+    );
     debugPrint('存储路径：$path');
     if (path != null) {
-      final String title = widget.provider.title;
-      final String content = widget.provider.txtContent;
-      // final Uint8List fileData = Uint8List.fromList(content.codeUnits);
-      final Uint8List fileData = const Utf8Encoder().convert(content);
       const String fileMimeType = 'text/plain';
       final XFile xFile = XFile.fromData(
         fileData,
         mimeType: fileMimeType,
-        name: title,
-        length: 10,
-        path: r'C:\Users\ilgnefz\Desktop',
       );
       await xFile.saveTo(path);
     } else {

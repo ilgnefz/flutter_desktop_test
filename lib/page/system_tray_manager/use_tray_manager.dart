@@ -99,7 +99,7 @@ class _UseTrayManagerPageState extends State<UseTrayManagerPage>
   }
 
   void _getBound() async {
-    Rect rect = await _trayManager.getBounds();
+    Rect? rect = await _trayManager.getBounds();
     print('rect: $rect');
   }
 

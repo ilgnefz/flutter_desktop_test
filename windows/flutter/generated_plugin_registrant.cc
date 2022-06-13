@@ -16,6 +16,7 @@
 #include <local_notifier/local_notifier_plugin.h>
 #include <pasteboard/pasteboard_plugin.h>
 #include <screen_capturer/screen_capturer_plugin.h>
+#include <screen_retriever/screen_retriever_plugin.h>
 #include <screen_text_extractor/screen_text_extractor_plugin.h>
 #include <tray_manager/tray_manager_plugin.h>
 #include <url_launcher_windows/url_launcher_windows.h>
@@ -43,6 +44,8 @@ void RegisterPlugins(flutter::PluginRegistry* registry) {
       registry->GetRegistrarForPlugin("PasteboardPlugin"));
   ScreenCapturerPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("ScreenCapturerPlugin"));
+  ScreenRetrieverPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("ScreenRetrieverPlugin"));
   ScreenTextExtractorPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("ScreenTextExtractorPlugin"));
   TrayManagerPluginRegisterWithRegistrar(

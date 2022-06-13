@@ -17,7 +17,11 @@ void main(List<String> args) async {
 
   await windowManager.ensureInitialized();
 
-  LocalNotifier.instance.setAppName('Flutter桌面应用');
+  await localNotifier.setup(
+    appName: 'Flutter桌面应用',
+    // 仅 Windows
+    shortcutPolicy: ShortcutPolicy.requireCreate,
+  );
 
   WindowOptions windowOptions = WindowOptions(
     title: 'Flutter桌面应用',
