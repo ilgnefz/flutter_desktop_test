@@ -1,5 +1,7 @@
 # flutter_desktop_test
 
+![img](.\img.png)
+
 该项目的作用是学习Flutter Desktop开发常用功能插件。
 
 目前所有内容仅适用于 Windows 端，Liunx 和 macOS平台可能需要另外进行配置，具体请查看各个第三方插件的官方文档。
