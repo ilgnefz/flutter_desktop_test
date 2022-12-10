@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart' hide MenuItem;
+import 'package:flutter_desktop_test/page/system_tray_manager/use_system_tray.dart';
 import 'package:tray_manager/tray_manager.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -17,6 +18,7 @@ class _UseTrayManagerPageState extends State<UseTrayManagerPage>
     with TrayListener {
   Timer? _timer;
   bool _hasIcon = false;
+  bool _checked = true;
 
   final TrayManager _trayManager = TrayManager.instance;
 
@@ -71,9 +73,15 @@ class _UseTrayManagerPageState extends State<UseTrayManagerPage>
 
   void _generateContextMenu() async {
     Menu _menu = Menu(items: [
-      MenuItem(label: '语文'),
+      MenuItem(label: '语文', icon: getImagePath('another')),
       MenuItem(label: '数学', toolTip: '躲不掉的'),
-      MenuItem(label: '英语', checked: false),
+      MenuItem.checkbox(
+        label: '英语',
+        checked: true,
+        onClick: (menuItem) {
+          menuItem.checked = !(menuItem.checked == true);
+        },
+      ),
       MenuItem.separator(),
       MenuItem.submenu(
         key: 'science',

@@ -23,10 +23,11 @@ void main(List<String> args) async {
     shortcutPolicy: ShortcutPolicy.requireCreate,
   );
 
-  WindowOptions windowOptions = WindowOptions(
+  WindowOptions windowOptions = const WindowOptions(
     title: 'Flutter桌面应用',
-    size: const Size(800, 600),
-    minimumSize: const Size(800, 600),
+    center: true,
+    size: Size(800, 600),
+    minimumSize: Size(800, 600),
   );
 
   windowManager.waitUntilReadyToShow(windowOptions, () async {

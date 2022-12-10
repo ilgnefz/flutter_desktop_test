@@ -15,6 +15,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   screen_capturer
   screen_retriever
   screen_text_extractor
+  system_tray
   tray_manager
   url_launcher_windows
   win_toast

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_desktop_test/page/system_tray_manager/use_system_tray.dart';
 import 'package:flutter_desktop_test/widgets/title_divider.dart';
 
 import 'use_tray_manager.dart';
@@ -21,8 +22,8 @@ class _SystemTrayManagerPageState extends State<SystemTrayManagerPage> {
           children: const [
             TitleDivider('tray manager'),
             UseTrayManagerPage(),
-            // TitleDivider('system tray'),
-            // UseSystemTrayPage(),
+            TitleDivider('system tray'),
+            UseSystemTrayPage(),
           ],
         ),
       ),
