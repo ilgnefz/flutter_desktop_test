@@ -4,7 +4,7 @@
 
 该项目的作用是学习Flutter Desktop开发常用功能插件。
 
-*注意：*如果因为更新了flutter版本号而造成的错误，试着运行以下命令解决：
+*注意：如果因为更新了flutter版本号而造成的错误，试着运行以下命令解决：
 ```
 flutter pub outdated
 flutter pub upgrade
