@@ -4,6 +4,12 @@
 
 该项目的作用是学习Flutter Desktop开发常用功能插件。
 
+*注意：*如果因为更新了flutter版本号而造成的错误，试着运行以下命令解决：
+```
+flutter pub outdated
+flutter pub upgrade
+```
+
 目前所有内容仅适用于 Windows 端，Liunx 和 macOS平台可能需要另外进行配置，具体请查看各个第三方插件的官方文档。
 
 目前该应用已拥有以下功能：
