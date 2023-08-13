@@ -1,6 +1,6 @@
 # flutter_desktop_test
 
-![img](https://github.com/ilgnefz/flutter_desktop_test/blob/main/img.png)
+![img](img.png)
 
 该项目的作用是学习Flutter Desktop开发常用功能插件。
 
