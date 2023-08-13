@@ -72,21 +72,21 @@ class _UseFileSelectorPageState extends State<UseFileSelectorPage> {
     final String content = widget.provider.txtContent;
     final Uint8List fileData = const Utf8Encoder().convert(content);
 // final Uint8List fileData = Uint8List.fromList(content.codeUnits);
-    final String? path = await getSavePath(
+    final FileSaveLocation? saveLocation = await getSaveLocation(
       acceptedTypeGroups: [
-        XTypeGroup(label: '文本', extensions: ['txt']),
+        const XTypeGroup(label: '文本', extensions: ['txt']),
       ],
       initialDirectory: r'C:\Users\ilgnefz\Pictures',
       suggestedName: title,
     );
-    debugPrint('存储路径：$path');
-    if (path != null) {
+    debugPrint('存储路径：${saveLocation?.path}');
+    if (saveLocation != null) {
       const String fileMimeType = 'text/plain';
       final XFile xFile = XFile.fromData(
         fileData,
         mimeType: fileMimeType,
       );
-      await xFile.saveTo(path);
+      await xFile.saveTo(saveLocation.path);
     } else {
       BotToast.showText(text: '给你个眼神自己体会😑');
     }
@@ -97,6 +97,15 @@ class _UseFileSelectorPageState extends State<UseFileSelectorPage> {
     if (path != null) {
       widget.provider.setTitle('目录');
       widget.provider.setTextContent(path);
+      widget.provider.setFileType('text');
+    }
+  }
+
+  void _pickMultiDir() async {
+    final List<String?> paths = await getDirectoryPaths();
+    if (paths.isNotEmpty) {
+      widget.provider.setTitle('多目录');
+      widget.provider.setTextContent(paths.join('\n'));
       widget.provider.setFileType('text');
     }
   }
@@ -130,7 +139,12 @@ class _UseFileSelectorPageState extends State<UseFileSelectorPage> {
         const SizedBox(height: 12),
         ElevatedButton(
           onPressed: _getDir,
-          child: const Text('读取文件夹路径'),
+          child: const Text('选择文件夹'),
+        ),
+        const SizedBox(height: 12),
+        ElevatedButton(
+          onPressed: _pickMultiDir,
+          child: const Text('选择多文件夹'),
         ),
       ],
     );
