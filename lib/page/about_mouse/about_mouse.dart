@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class AboutMousePage extends StatefulWidget {
-  const AboutMousePage({Key? key}) : super(key: key);
+  const AboutMousePage({super.key});
 
   @override
   State<AboutMousePage> createState() => _AboutMousePageState();

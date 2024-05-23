@@ -5,9 +5,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
 
 class HasWebView extends StatefulWidget {
-  const HasWebView({
-    Key? key,
-  }) : super(key: key);
+  const HasWebView({super.key});
 
   @override
   State<HasWebView> createState() => _HasWebViewState();
@@ -108,8 +106,7 @@ class _HasWebViewState extends State<HasWebView> {
           ),
           const SizedBox(height: 16),
           const Text('浏览历史：'),
-          ...List.generate(_allUrl.length, (index) => Text(_allUrl[index]))
-              .toList(),
+          ...List.generate(_allUrl.length, (index) => Text(_allUrl[index])),
         ],
       ),
     );

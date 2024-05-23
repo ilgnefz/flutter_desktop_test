@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class UseFlutterWidget extends StatefulWidget {
-  const UseFlutterWidget({Key? key}) : super(key: key);
+  const UseFlutterWidget({super.key});
 
   @override
   State<UseFlutterWidget> createState() => _UseFlutterWidgetState();
@@ -63,11 +63,11 @@ class DecrementIntent extends Intent {}
 
 class CounterShortcuts extends StatelessWidget {
   const CounterShortcuts({
-    Key? key,
+    super.key,
     required this.child,
     required this.onIncrementDetected,
     required this.onDecrementDetected,
-  }) : super(key: key);
+  });
 
   final Widget child;
   final VoidCallback onIncrementDetected;

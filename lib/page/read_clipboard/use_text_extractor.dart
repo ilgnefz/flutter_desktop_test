@@ -8,7 +8,7 @@ import 'package:screen_capturer/screen_capturer.dart';
 import 'package:screen_text_extractor/screen_text_extractor.dart';
 
 class UseTextExtractor extends StatefulWidget {
-  const UseTextExtractor({Key? key}) : super(key: key);
+  const UseTextExtractor({super.key});
 
   @override
   State<UseTextExtractor> createState() => _UseTextExtractorState();
@@ -23,13 +23,13 @@ class _UseTextExtractorState extends State<UseTextExtractor> {
 
   void _screenShot() async {
     // Directory _dir = await getApplicationDocumentsDirectory();
-    String _imageName = '${DateTime.now().millisecondsSinceEpoch}.png';
+    String imageName = '${DateTime.now().millisecondsSinceEpoch}.png';
     // String _imagePath ='${_dir.path}/$_imageName';
-    String _imagePath = 'C:\\Users\\ilgnefz\\Pictures\\$_imageName';
-    CapturedData? _capturedData =
-        await ScreenCapturer.instance.capture(imagePath: _imagePath);
-    if (_capturedData != null) {
-      _img = _capturedData.imagePath;
+    String imagePath = 'C:\\Users\\ilgnefz\\Pictures\\$imageName';
+    CapturedData? capturedData =
+        await ScreenCapturer.instance.capture(imagePath: imagePath);
+    if (capturedData != null) {
+      _img = capturedData.imagePath;
       _type = ClipboardType.image;
       setState(() {});
     } else {

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hotkey_manager/hotkey_manager.dart';
 
 class UseHotKeyManager extends StatefulWidget {
-  const UseHotKeyManager({Key? key}) : super(key: key);
+  const UseHotKeyManager({super.key});
 
   @override
   State<UseHotKeyManager> createState() => _UseHotKeyManagerState();
@@ -12,7 +13,10 @@ class _UseHotKeyManagerState extends State<UseHotKeyManager> {
   String _message = '你还未按下任何快捷键';
   int _count = 0;
 
-  HotKey _hotKey = HotKey(KeyCode.f2, modifiers: [KeyModifier.alt]);
+  HotKey _hotKey = HotKey(
+    key: PhysicalKeyboardKey.keyA,
+    modifiers: [HotKeyModifier.alt],
+  );
   HotKey? _newHotKey;
 
   @override
@@ -33,13 +37,13 @@ class _UseHotKeyManagerState extends State<UseHotKeyManager> {
       keyDownHandler: (hotKey) {
         _count++;
         if (hotKey.modifiers == null) {
-          _message = '按下了快捷键${hotKey.keyCode.keyLabel} $_count次';
+          _message = '按下了快捷键${hotKey.key.keyLabel} $_count次';
         } else {
           _message = '按下了快捷键';
           for (var key in hotKey.modifiers!) {
-            _message += '${key.keyLabel} + ';
+            _message += '${key.name} + ';
           }
-          _message += '${hotKey.keyCode.keyLabel} $_count次';
+          _message += '${hotKey.key.keyLabel} $_count次';
         }
         setState(() {});
       },

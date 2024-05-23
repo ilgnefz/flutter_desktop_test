@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:bot_toast/bot_toast.dart';
-import 'package:flutter/material.dart' hide MenuItem;
+import 'package:flutter/material.dart';
 import 'package:system_tray/system_tray.dart';
 
 class UseSystemTrayPage extends StatefulWidget {
-  const UseSystemTrayPage({Key? key}) : super(key: key);
+  const UseSystemTrayPage({super.key});
 
   @override
   State<UseSystemTrayPage> createState() => _UseSystemTrayPageState();

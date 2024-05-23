@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTooltip extends StatefulWidget {
-  const CustomTooltip({Key? key}) : super(key: key);
+  const CustomTooltip({super.key});
 
   @override
   State<CustomTooltip> createState() => _CustomTooltipState();

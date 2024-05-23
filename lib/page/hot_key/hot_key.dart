@@ -3,7 +3,7 @@ import 'package:flutter_desktop_test/page/hot_key/use_flutter_widget.dart';
 import 'package:flutter_desktop_test/page/hot_key/use_hotkey_manager.dart';
 
 class HotKeyPage extends StatefulWidget {
-  const HotKeyPage({Key? key}) : super(key: key);
+  const HotKeyPage({super.key});
 
   @override
   State<HotKeyPage> createState() => _HotKeyPageState();

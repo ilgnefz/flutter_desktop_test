@@ -1,10 +1,10 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:contextual_menu/contextual_menu.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart' hide MenuItem;
+import 'package:flutter/material.dart';
 
 class UseContextualMenu extends StatefulWidget {
-  const UseContextualMenu({Key? key}) : super(key: key);
+  const UseContextualMenu({super.key});
 
   @override
   State<UseContextualMenu> createState() => _UseContextualMenuState();
@@ -57,7 +57,7 @@ class _UseContextualMenuState extends State<UseContextualMenu> {
 }
 
 _showContext() {
-  Menu _menu = Menu(
+  Menu menu = Menu(
     items: [
       MenuItem(label: '风起陇西'),
       MenuItem.separator(),
@@ -85,7 +85,7 @@ _showContext() {
     ],
   );
   popUpContextualMenu(
-    _menu,
+    menu,
     // position: Offset.zero,
     placement: Placement.topLeft,
   );

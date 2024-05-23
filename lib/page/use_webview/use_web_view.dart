@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'has_web_view.dart';
 
 class UseWebView extends StatefulWidget {
-  const UseWebView({Key? key}) : super(key: key);
+  const UseWebView({super.key});
 
   @override
   State<UseWebView> createState() => _UseWebViewState();
@@ -41,10 +41,10 @@ class _UseWebViewState extends State<UseWebView> {
   }
 
   Widget noWebView() {
-    return Center(
+    return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           Text('你的设备缺少WebView2 Runtime，复制以下链接到浏览器进行下载'),
           SizedBox(height: 8),
           SelectableText(

@@ -9,10 +9,10 @@ list(APPEND FLUTTER_PLUGIN_LIST
   desktop_drop
   desktop_webview_window
   file_selector_windows
-  hotkey_manager
+  hotkey_manager_windows
   local_notifier
   pasteboard
-  screen_capturer
+  screen_capturer_windows
   screen_retriever
   screen_text_extractor
   system_tray

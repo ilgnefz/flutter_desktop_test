@@ -5,7 +5,7 @@ import 'package:flutter_desktop_test/providers/upload_file.dart';
 import 'package:flutter_desktop_test/widgets/image_decorated.dart';
 
 class SingleFile extends StatelessWidget {
-  const SingleFile(this.provider, {Key? key}) : super(key: key);
+  const SingleFile(this.provider, {super.key});
 
   final UploadFileProvider provider;
 

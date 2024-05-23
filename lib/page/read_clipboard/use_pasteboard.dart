@@ -12,7 +12,7 @@ import 'package:pasteboard/pasteboard.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UsePasteboard extends StatefulWidget {
-  const UsePasteboard({Key? key}) : super(key: key);
+  const UsePasteboard({super.key});
 
   @override
   State<UsePasteboard> createState() => _UsePasteboardState();
@@ -24,9 +24,9 @@ class _UsePasteboardState extends State<UsePasteboard> {
   String _text = '还没粘贴任何内容';
 
   void _openExplorer() async {
-    const _filePath = r'C:\Users\ilgnefz\Pictures';
-    final Uri _uri = Uri.file(_filePath, windows: true);
-    await launchUrl(_uri);
+    const filePath = r'C:\Users\ilgnefz\Pictures';
+    final Uri uri = Uri.file(filePath, windows: true);
+    await launchUrl(uri);
   }
 
   void _copyText() async {
@@ -43,14 +43,14 @@ class _UsePasteboardState extends State<UsePasteboard> {
     setState(() {});
   }
 
-void _copyFile() async {
-  if (_controller.text.isEmpty) {
-    BotToast.showText(text: '啥都没输入，你要我复制什么🥴');
-  } else {
-    final lines = const LineSplitter().convert(_controller.text);
-    await Pasteboard.writeFiles(lines);
+  void _copyFile() async {
+    if (_controller.text.isEmpty) {
+      BotToast.showText(text: '啥都没输入，你要我复制什么🥴');
+    } else {
+      final lines = const LineSplitter().convert(_controller.text);
+      await Pasteboard.writeFiles(lines);
+    }
   }
-}
 
   void _pastFile() async {
     final results = await Pasteboard.files();

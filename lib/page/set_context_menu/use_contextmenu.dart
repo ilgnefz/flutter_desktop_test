@@ -3,7 +3,7 @@ import 'package:contextmenu/contextmenu.dart';
 import 'package:flutter/material.dart';
 
 class UseContextmenu extends StatefulWidget {
-  const UseContextmenu({Key? key}) : super(key: key);
+  const UseContextmenu({super.key});
 
   @override
   State<UseContextmenu> createState() => _UseContextmenuState();

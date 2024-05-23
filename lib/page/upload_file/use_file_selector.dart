@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/providers/upload_file.dart';
 
 class UseFileSelectorPage extends StatefulWidget {
-  const UseFileSelectorPage(this.provider, {Key? key}) : super(key: key);
+  const UseFileSelectorPage(this.provider, {super.key});
 
   final UploadFileProvider provider;
 
@@ -18,7 +18,7 @@ class UseFileSelectorPage extends StatefulWidget {
 class _UseFileSelectorPageState extends State<UseFileSelectorPage> {
   void _pickOneImage() async {
     const String label = 'image';
-    final XTypeGroup xType =
+    const XTypeGroup xType =
         XTypeGroup(label: label, extensions: ['jpg', 'png']);
     final XFile? file = await openFile(
       acceptedTypeGroups: [xType],
@@ -36,7 +36,7 @@ class _UseFileSelectorPageState extends State<UseFileSelectorPage> {
 
   void _pickMultiImage() async {
     const label = 'multiImage';
-    final xType = XTypeGroup(label: label, extensions: ['jpg', 'png']);
+    const xType = XTypeGroup(label: label, extensions: ['jpg', 'png']);
     final List<XFile> files = await openFiles(acceptedTypeGroups: [xType]);
     if (files.isNotEmpty) {
       List<String> paths = files.map((e) => e.path).toList();
@@ -55,7 +55,7 @@ class _UseFileSelectorPageState extends State<UseFileSelectorPage> {
 
   void _pickTextFile() async {
     const label = 'text';
-    final XTypeGroup xType = XTypeGroup(label: label, extensions: ['txt']);
+    const XTypeGroup xType = XTypeGroup(label: label, extensions: ['txt']);
     final XFile? file = await openFile(acceptedTypeGroups: [xType]);
     if (file != null) {
       widget.provider.setTitle(file.name);

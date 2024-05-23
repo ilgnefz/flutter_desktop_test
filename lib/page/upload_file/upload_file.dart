@@ -10,7 +10,7 @@ import 'single_file.dart';
 import 'single_image.dart';
 
 class UploadFilePage extends StatefulWidget {
-  const UploadFilePage({Key? key}) : super(key: key);
+  const UploadFilePage({super.key});
 
   @override
   State<UploadFilePage> createState() => _UploadFilePageState();
@@ -64,8 +64,8 @@ class _UploadFilePageState extends State<UploadFilePage> {
 
 class NullState extends StatelessWidget {
   const NullState({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

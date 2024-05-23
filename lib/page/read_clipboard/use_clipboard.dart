@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class UseClipboard extends StatelessWidget {
   const UseClipboard({
-    Key? key,
+    super.key,
     this.onTap0,
     this.onTap1,
     this.onTap2,
     this.onTap3,
-  }) : super(key: key);
+  });
 
   final void Function()? onTap0;
   final void Function()? onTap1;

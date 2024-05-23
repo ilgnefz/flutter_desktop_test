@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:local_notifier/local_notifier.dart';
 
 class UseLocalNotifier extends StatefulWidget {
-  const UseLocalNotifier({Key? key}) : super(key: key);
+  const UseLocalNotifier({super.key});
 
   @override
   State<UseLocalNotifier> createState() => _UseLocalNotifierState();

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/widgets/image_decorated.dart';
 
 class SingleImage extends StatelessWidget {
-  const SingleImage(this.path, {Key? key}) : super(key: key);
+  const SingleImage(this.path, {super.key});
 
   final String path;
 

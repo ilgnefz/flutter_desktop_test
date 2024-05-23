@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TitleDivider extends StatelessWidget {
-  const TitleDivider(this.title, {this.top, this.bottom, Key? key})
-      : super(key: key);
+  const TitleDivider(this.title, {this.top, this.bottom, super.key});
 
   final String title;
   final double? top;

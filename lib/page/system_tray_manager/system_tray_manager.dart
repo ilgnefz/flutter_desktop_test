@@ -5,7 +5,7 @@ import 'package:flutter_desktop_test/widgets/title_divider.dart';
 import 'use_tray_manager.dart';
 
 class SystemTrayManagerPage extends StatefulWidget {
-  const SystemTrayManagerPage({Key? key}) : super(key: key);
+  const SystemTrayManagerPage({super.key});
 
   @override
   State<SystemTrayManagerPage> createState() => _SystemTrayManagerPageState();
@@ -14,12 +14,12 @@ class SystemTrayManagerPage extends StatefulWidget {
 class _SystemTrayManagerPageState extends State<SystemTrayManagerPage> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(24.0),
+    return const Padding(
+      padding: EdgeInsets.all(24.0),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             TitleDivider('tray manager'),
             UseTrayManagerPage(),
             TitleDivider('system tray'),

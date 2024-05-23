@@ -15,7 +15,7 @@ import 'package:window_manager/window_manager.dart';
 import 'welcome.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -76,8 +76,9 @@ class _HomePageState extends State<HomePage> with WindowListener {
 
   @override
   void onWindowClose() async {
-    bool _isClose = await windowManager.isPreventClose();
-    if (_isClose) {
+    bool isClose = await windowManager.isPreventClose();
+    if (!mounted) return;
+    if (isClose) {
       showDialog<void>(
         context: context,
         // false = user must tap button, true = tap outside dialog
@@ -126,6 +127,9 @@ class _HomePageState extends State<HomePage> with WindowListener {
                     child: Container(
                       height: 40,
                       alignment: Alignment.center,
+                      color: _currentIndex == index
+                          ? Colors.blue.withOpacity(.8)
+                          : Colors.white,
                       child: Text(
                         _titles[index],
                         style: TextStyle(
@@ -133,9 +137,6 @@ class _HomePageState extends State<HomePage> with WindowListener {
                                 ? Colors.white
                                 : Colors.black),
                       ),
-                      color: _currentIndex == index
-                          ? Colors.blue.withOpacity(.8)
-                          : Colors.white,
                     ),
                   );
                 },

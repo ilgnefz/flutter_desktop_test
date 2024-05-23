@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_desktop_test/page/set_context_menu/use_%20contextual_menu.dart';
-import 'package:flutter_desktop_test/page/set_context_menu/use_context_menu.dart';
+import 'package:flutter_desktop_test/page/set_context_menu/use_contextual_menu.dart';
 import 'package:flutter_desktop_test/page/set_context_menu/use_desktop_context_menu.dart';
 
 import 'use_contextmenu.dart';
@@ -11,7 +10,7 @@ const String cmTitle = '蚍蜉渡海';
 final List<String> cmSongs = ['裁梦为魂', '如一', '不老梦', '是风动', '卑微情书'];
 
 class SetContextMenuPage extends StatefulWidget {
-  const SetContextMenuPage({Key? key}) : super(key: key);
+  const SetContextMenuPage({super.key});
 
   @override
   State<SetContextMenuPage> createState() => _SetContextMenuPageState();
@@ -19,7 +18,7 @@ class SetContextMenuPage extends StatefulWidget {
 
 class _SetContextMenuPageState extends State<SetContextMenuPage> {
   final List<Widget> _children = const [
-    UseContextMenu(),
+    // UseContextMenu(),
     UseContextmenu(),
     // UseNativeContextMenu(),
     UseDesktopContextMenu(),
@@ -27,7 +26,7 @@ class _SetContextMenuPageState extends State<SetContextMenuPage> {
   ];
 
   final List<String> _titles = [
-    'context_menus',
+    // 'context_menus',
     'contextmenus',
     // 'native_context_menu',
     'desktop_context_menu',
@@ -40,7 +39,7 @@ class _SetContextMenuPageState extends State<SetContextMenuPage> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: IndexedStack(children: _children, index: _current)),
+        Expanded(child: IndexedStack(index: _current, children: _children)),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
@@ -48,13 +47,13 @@ class _SetContextMenuPageState extends State<SetContextMenuPage> {
             children: List.generate(
               _titles.length,
               (index) => ElevatedButton(
-                  child: Text(_titles[index]),
                   onPressed: _current == index
                       ? null
                       : () {
                           _current = index;
                           setState(() {});
-                        }),
+                        },
+                  child: Text(_titles[index])),
             ),
           ),
         ),

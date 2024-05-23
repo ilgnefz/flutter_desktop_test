@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/providers/upload_file.dart';
 
 class UseFilePickerPage extends StatefulWidget {
-  const UseFilePickerPage(this.provider, {Key? key}) : super(key: key);
+  const UseFilePickerPage(this.provider, {super.key});
 
   final UploadFileProvider provider;
 

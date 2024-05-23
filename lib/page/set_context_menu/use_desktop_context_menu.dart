@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class UseDesktopContextMenu extends StatefulWidget {
-  const UseDesktopContextMenu({Key? key}) : super(key: key);
+  const UseDesktopContextMenu({super.key});
 
   @override
   State<UseDesktopContextMenu> createState() => _UseDesktopContextMenuState();
@@ -49,7 +49,7 @@ class _UseDesktopContextMenuState extends State<UseDesktopContextMenu> {
   }
 
   _showContext() async {
-    final _menu = await showContextMenu(
+    final menu = await showContextMenu(
       menuItems: [
         ContextMenuItem(
           title: '新建',
@@ -96,8 +96,8 @@ class _UseDesktopContextMenuState extends State<UseDesktopContextMenu> {
         ),
       ],
     );
-    if (_menu == null) return;
-    BotToast.showText(text: _menu.title ?? '');
-    _menu.onTap?.call();
+    if (menu == null) return;
+    BotToast.showText(text: menu.title ?? '');
+    menu.onTap?.call();
   }
 }

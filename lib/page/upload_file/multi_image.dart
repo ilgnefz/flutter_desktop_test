@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class MultiImage extends StatelessWidget {
-  const MultiImage(this.paths, {Key? key}) : super(key: key);
+  const MultiImage(this.paths, {super.key});
 
   final List<String?> paths;
 

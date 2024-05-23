@@ -7,7 +7,7 @@ import 'package:desktop_drop/desktop_drop.dart';
 import 'package:flutter_desktop_test/widgets/image_decorated.dart';
 
 class DropFilePage extends StatefulWidget {
-  const DropFilePage({Key? key}) : super(key: key);
+  const DropFilePage({super.key});
 
   @override
   State<DropFilePage> createState() => _DropFilePageState();
@@ -43,9 +43,9 @@ class _DropFilePageState extends State<DropFilePage> {
           shape: Shape.box,
           borderRadius: const BorderRadius.all(Radius.circular(24)),
         ),
-        child: Column(
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Icon(Icons.image, size: 60, color: Colors.blue),
             SizedBox(height: 8),
             Text(
@@ -60,7 +60,7 @@ class _DropFilePageState extends State<DropFilePage> {
 }
 
 class ViewImage extends StatelessWidget {
-  const ViewImage(this.file, {Key? key}) : super(key: key);
+  const ViewImage(this.file, {super.key});
 
   final XFile file;
 

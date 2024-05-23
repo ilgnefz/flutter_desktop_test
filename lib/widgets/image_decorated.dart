@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ImageDecorated extends StatelessWidget {
-  const ImageDecorated({required this.child, Key? key}) : super(key: key);
+  const ImageDecorated({required this.child, super.key});
 
   final Widget child;
 

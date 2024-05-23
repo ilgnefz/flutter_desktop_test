@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop_test/providers/upload_file.dart';
 
 class ReadText extends StatelessWidget {
-  const ReadText(this.provider, {Key? key}) : super(key: key);
+  const ReadText(this.provider, {super.key});
 
   final UploadFileProvider provider;
 
